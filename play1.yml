@@ -1,0 +1,13 @@
+- name: Ping Servers 
+  hosts: all
+  become: yes
+
+  tasks:    
+  
+  - name: Task ping
+    ping:
+
+  - name: Install apache2
+    apt:
+      pkg: apache2
+      state: present  
