@@ -1,0 +1,13 @@
+---
+# tasks file for first_role
+- name: Task ping
+  ping:
+
+- name: Install nginx
+  apt:
+    pkg: nginx
+    state: present
+  
+- name: Copy 
+  copy: src=website_folder/index1.html dest=/var/www/html
+
