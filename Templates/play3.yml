@@ -1,0 +1,13 @@
+- name: ping
+  hosts: all
+  become: yes
+  
+  vars:
+   xxx: Hello World
+
+  tasks:
+ 
+  - name: copy
+    template:
+      src: ./website_folder/index.j2
+      dest: /var/www/html/index.html  
